@@ -15,6 +15,15 @@ from .models import Set
 from pokemontcgsdk import Set as TcgSet  
 
 def populate_sets_to_database():
+    """
+    Populate the Set model in the database using data fetched from an API.
+
+    Parameters:
+    None
+
+    Returns:
+    None
+    """
     sets = TcgSet.all()  # Fetch sets from the API
     print(f"Number of sets fetched: {len(sets)}")
 
