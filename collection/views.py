@@ -92,6 +92,15 @@ def populate_cards_to_database():
         page += 1
 
 def populate_data(request):
+    """
+    Wrapper function to populate both sets and cards into the database.
+
+    Parameters:
+    - request: The HTTP request object
+
+    Returns:
+    HttpResponse indicating the success or failure of the operation.
+    """
     populate_sets_to_database()
     populate_cards_to_database()
     print("Data populated successfully!")
