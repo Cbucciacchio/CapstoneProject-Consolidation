@@ -125,6 +125,16 @@ def collection_view(request):
 
 
 def cards_view(request, set_id=None):
+    """
+    Renders a view that displays cards based on the selected set.
+
+    Parameters:
+    - request: The HTTP request object
+    - set_id: The ID of the set to filter cards by (optional)
+
+    Returns:
+    Rendered HTML page with data on cards.
+    """
     set_name = None
     user_collection = None  
     
