@@ -45,6 +45,15 @@ def populate_sets_to_database():
             print(f"Updated existing set: {set.name}")
 
 def populate_cards_to_database():
+    """
+    Populate the Card model in the database using data fetched from an API.
+
+    Parameters:
+    None
+
+    Returns:
+    None
+    """
     page = 1
     page_size = 250
     
