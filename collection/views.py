@@ -108,6 +108,15 @@ def populate_data(request):
 
 
 def collection_view(request):
+    """
+    Renders a view that displays recent sets from the Set model in the database.
+
+    Parameters:
+    - request: The HTTP request object
+
+    Returns:
+    Rendered HTML page with data on recent sets.
+    """
     two_years_ago = (datetime.now() - timedelta(days=364)).date()  
     all_sets = Set.objects.all()
     recent_sets = [set for set in all_sets if set.releaseDate and set.releaseDate >= two_years_ago]
