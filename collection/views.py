@@ -178,6 +178,16 @@ def my_collection(request):
 
 @login_required
 def add_card_to_collection(request, id):
+    """
+    Adds a selected card to the authenticated user's collection.
+
+    Parameters:
+    - request: The HTTP request object
+    - id: The ID of the card to add to the collection
+
+    Returns:
+    JsonResponse indicating the success or failure of the operation.
+    """
     user = request.user
     print(f"Trying to add card with ID {id} to collection for user {user.username}")
     
