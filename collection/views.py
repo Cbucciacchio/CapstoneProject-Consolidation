@@ -162,6 +162,15 @@ def cards_view(request, set_id=None):
 
 @login_required
 def my_collection(request):
+    """
+    Renders a view showing all the cards in the authenticated user's collection.
+
+    Parameters:
+    - request: The HTTP request object
+
+    Returns:
+    Rendered HTML page with data on the user's collection.
+    """
     my_collection, created = MyCollection.objects.get_or_create(user=request.user)
     cards = my_collection.cards.all()
     return render(request, 'my_collection.html', {'cards': cards})
