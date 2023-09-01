@@ -1,0 +1,64 @@
+.card {
+    display: flex;  /* Changed to flex */
+    align-items: center;  /* Centers items vertically in the container */
+    justify-content: center;  /* Centers items horizontally in the container */
+    border: 1px solid rgba(0,0,0,0.125);
+    border-radius: 0.25rem;
+    transition: box-shadow 0.3s ease;
+    height: 400px;
+}
+
+
+.card:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.logo-container {
+    width: 170px;
+    height: 170px;
+    display: flex;
+    align-items: center;  /* Vertically center the logo */
+    justify-content: center;  /* Horizontally center the logo */
+    margin: 1rem auto;  /* Center the logo container */
+    background-color: #f5f4f6;  /* Background color for the container */
+    
+    overflow: hidden;  /* Ensuring that oversized images don't spill out */
+}
+
+.card-img-top {
+    max-height: 70%;  /* Ensure the image doesn't exceed the container's height */
+    max-width: 70%;  /* Ensure the image doesn't exceed the container's width */
+    display: block;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #f5f4f6;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1rem;  
+    font-family: 'Ubuntu', sans-serif;
+    color: #232727;
+}
+.add-to-collection {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.navbar {
+    background-color: #f5f4f6; /* Applying the background color to the navbar */
+    border-bottom: 3px solid #f5211d; /* A subtle border at the bottom to add a touch of the accent color */
+}
+
+.navbar-dark .navbar-brand, .navbar-dark .navbar-nav .nav-link {
+    color: #232727; /* Applying the text color to navbar links and brand */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f5211d; /* Hover effect for navbar links */
+}
