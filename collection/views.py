@@ -226,6 +226,16 @@ def add_card_to_collection(request, id):
 
 @login_required
 def remove_card_from_collection(request, id):
+    """
+    Removes a selected card from the authenticated user's collection.
+
+    Parameters:
+    - request: The HTTP request object
+    - id: The ID of the card to remove from the collection
+
+    Returns:
+    JsonResponse indicating the success or failure of the operation.
+    """
     user = request.user
     try:
         # Retrieve the UserCollection for the user
